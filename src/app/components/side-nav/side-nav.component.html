@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-12 logos d-flex align-items-center justify-content-center flex-column">
+        <img class="mb-4" src="assets/images/logo-brita.png" width="100px" alt="">
+        <!-- <img src="assets/images/logo-brita.png" width="100px" alt=""> -->
+        <img src="assets/images/abugaber.png" width="150px" alt="">
+    </div>
+    <div class="col-12 p-4 d-flex flex-column justify-content-between">
+        <div class="seccions">
+            <div class="secction mt-3" *ngFor="let section of sections">
+                <h4>{{section.title}}</h4>
+                <p (click)="openQuestion(description)" *ngFor="let description of section.sections"> {{description}}</p>
+            </div>
+        </div>
+        <div class="user-info mt-3">
+            <div class="user-info-image">
+                {{userData.name.charAt(0).toUpperCase()}}
+            </div>
+            <div>{{userData.name}}</div>
+        </div>
+    </div>
+</div>
